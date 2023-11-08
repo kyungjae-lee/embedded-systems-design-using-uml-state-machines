@@ -24,6 +24,12 @@ typedef enum {
     STAT
 } protimer_state_t;
 
+typedef enum {
+    EVENT_HANDLED,
+    EVENT_IGNORED,
+    EVENT_TRANSITION
+} event_status_t;
+
 /* Main application structure */
 typedef struct {
     uint32_t curr_time;
@@ -50,5 +56,6 @@ typedef struct {
 
 /* Function prototyes */
 void protimer_init(protimer_t *mobj);
+
 
 #endif /* MAIN_H */
